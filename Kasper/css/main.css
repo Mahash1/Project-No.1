@@ -1,0 +1,71 @@
+/* Start Variables */
+:root {
+  --right-left-padding: 60px;
+  --up-down-padding: 20px;
+
+  --maincolor: #10cab7;
+  --Sectioncolor: #f6f6f6;
+  --theme-color: #10cab7;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 280px) {
+  .sech {
+    font-size: 65px;
+  }
+  .secp {
+    font-size: 15px;
+    margin-top: -15px;
+    letter-spacing: -1px;
+  }
+}
+@media (min-width: 281px) and (max-width: 767px) {
+  .sech {
+    font-size: 85px;
+  }
+  .secp {
+    font-size: 20px;
+    margin-top: -20px;
+    letter-spacing: -1px;
+  }
+}
+/* End Global Rules */
+
+/* Start header */
