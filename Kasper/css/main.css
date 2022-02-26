@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .container {
   padding: 0 15px;
@@ -69,3 +69,40 @@ body {
 /* End Global Rules */
 
 /* Start header */
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.head .container {
+  display: flex;
+  justify-content: space-between;
+}
+.head .container .logo span {
+  font-size: 62px;
+}
+.head .container .logo img {
+  height: 40px;
+}
+.head .container .list {
+  display: flex;
+  justify-content: space-between;
+}
+.head .container .list p {
+  margin: 0 10px;
+}
+.head .container .list div {
+  border-left: solid black 2px;
+}
+.head .container ul li {
+  list-style: ;
+}
+/* End header */
+
+.land {
+  background-image: url(/Project-No.1/Kasper/images/landing.jpg);
+  height: 100vh;
+  width: 100vw;
+}
