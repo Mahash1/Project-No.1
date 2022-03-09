@@ -3,9 +3,7 @@
   --right-left-padding: 60px;
   --up-down-padding: 20px;
 
-  --maincolor: #10cab7;
-  --Sectioncolor: #f6f6f6;
-  --theme-color: #10cab7;
+  --maincolor: #19c8fa;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -19,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .container {
   padding: 0 15px;
@@ -68,20 +66,24 @@ body {
 }
 /* End Global Rules */
 
-/* Start header */
+/* Start Nav */
 .head {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 25px;
 }
 
 .head .container {
   display: flex;
   justify-content: space-between;
+  background-color: #1f2021;
 }
 .head .container .logo span {
   font-size: 62px;
+}
+.head .container .logo {
+  display: flex;
 }
 .head .container .logo img {
   height: 40px;
@@ -90,19 +92,42 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.head .container .list p {
+.head .container .list ul {
+  display: flex;
+}
+.head .container .list ul li {
   margin: 0 10px;
+  list-style: none;
 }
-.head .container .list div {
-  border-left: solid black 2px;
+.head .container .list ul li .active {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
-.head .container ul li {
-  list-style: ;
+.head .container .list li a {
+  text-decoration: none;
+  color: white;
 }
-/* End header */
+
+.head .container .list ul li a:hover {
+  color: var(--maincolor);
+}
+.head .container .list ul li a::after {
+  border-bottom: 2px solid var(--maincolor);
+}
+hr {
+  height: 10px;
+  background-color: green;
+}
+/* End Nav */
+/* Start Landing */
 
 .land {
-  background-image: url(/Project-No.1/Kasper/images/landing.jpg);
-  height: 100vh;
-  width: 100vw;
+  display: flex;
+  background-image: url(/Kasper/images/landing.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-color: #1f2021;
+  position: relative;
 }
+
+/* End Landing */
