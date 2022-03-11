@@ -2,7 +2,6 @@
 :root {
   --right-left-padding: 60px;
   --up-down-padding: 20px;
-
   --maincolor: #19c8fa;
 }
 /* End Variables */
@@ -110,8 +109,6 @@ body {
 @media (max-width: 768px) {
   .head .container .list i {
     top: 13px;
-  }
-  .head .container .list i:not(:first-child) {
   }
 }
 
