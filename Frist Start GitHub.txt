@@ -1,0 +1,16 @@
+ssh-keygen -t rsa -b 4096 -C "mando20102000000@yahoo.com"              <<< To Genrate SSH Keygen
+cat ~/.ssh/id_rsa.pub                                                  <<< To View SSH Keygen
+ssh -T git@github.com                                                  <<< To Check SSH Keygen
+git config --global user.email "mando2010200000@yahoo.com"             <<< To Add User Email
+git config --global user.name "Mahash1"                                <<< To Add User Named
+git clone git@github.com:Mahash1/Project-No.1.git                      <<< To Download my Repo's
+
+
+
+
+
+
+
+
+
+
