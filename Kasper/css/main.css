@@ -159,7 +159,7 @@ body {
     width: 100vw;
     background-color: rgb(0 0 0 / 35%);
   }
-  .head .container .icon:hover ~ .list ul {
+  .head .container .iconf:hover ~ .list ul {
     display: flex;
   }
   .head .container .list ul li {
@@ -168,22 +168,13 @@ body {
     padding-bottom: 11px;
     text-align: start;
   }
-  .head .container .list:hover i:first-child {
-    left: 75px;
-  }
   .head .container .list ul li::after {
     content: "";
     border-bottom: none;
   }
-  .head .container .list:hover ul {
-  }
-}
-@media (max-width: 768px) {
-  .head .container .list .icon:hover .list {
-    display: block;
-  }
 }
 
+.head .iconf,
 .head .icon {
   color: white;
   position: absolute;
@@ -193,12 +184,15 @@ body {
   left: calc(100vw - 90px);
   font-size: 25px;
 }
+.head .iconf {
+  left: calc(100vw - 115px);
+}
 .head .icon hr {
   height: 25px;
   margin: 0 10px;
 }
-@media (min-width: 768px) {
-  .head .icon i:first-child {
+@media (min-width: 769px) {
+  .head .iconf {
     display: none;
   }
 }
@@ -216,11 +210,7 @@ body {
   left: 25px;
   z-index: -1;
 }
-@media (max-width: 768px) {
-  .head > hr {
-    /* top: 65px; */
-  }
-}
+
 /* End Nav */
 /* Start Landing */
 
@@ -236,15 +226,13 @@ body {
   background-color: rgb(0 0 0 / 60%);
 }
 .land .text {
-  display: flex;
-  flex-direction: column;
   position: absolute;
-  max-width: 70%;
-  margin-top: 15%;
+  width: 60%;
   padding: 50px;
   background-color: rgb(15 116 143 / 70%);
-  top: 25%;
+  top: 50%;
   left: 0;
+  transform: translatey(-50%);
 }
 @media (min-width: 768px) {
   .land .text {
@@ -272,5 +260,92 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+.land i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.land i.left {
+  left: 10px;
+}
+.land i.right {
+  right: 20px;
+}
+.land ul {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+.land ul li {
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+.land ul li.active {
+  background-color: var(--maincolor);
+}
+@media (max-width: 769px) {
+  .land i {
+    display: none;
+  }
+}
 
 /* End Landing */
+/* Start Services */
+.services .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.services .intro h2 {
+  font-size: 40px;
+  padding: 60px 0 10px;
+  margin: auto;
+  font-weight: 200;
+}
+.services .serv .hr {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.services .serv .hr hr {
+  width: 230px;
+  border-bottom: 2px solid;
+}
+.services .serv hr:nth-of-type(2) {
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  top: -7.5px;
+}
+.services .intro p {
+  padding: 60px 0;
+  max-width: 60%;
+  line-height: 2;
+  color: #777;
+}
+.services .container .servbox {
+  display: flex;
+  min-width: 100%;
+  flex-wrap: wrap;
+}
+.services .container .serv {
+  position: relative;
+  display: flex;
+  margin: 20px;
+  width: 45%;
+}
+
+/* End Services */
