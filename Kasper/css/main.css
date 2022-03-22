@@ -388,16 +388,37 @@ body {
   display: flex;
   align-items: center;
   height: 600px;
+  margin: 100px 0;
+  min-width: 289px;
   background-image: url(/Kasper/images/design-features.jpg);
   background-size: cover;
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
 }
+.services .servimg::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0 0 0 / 55%);
+  position: absolute;
+}
+
+.services .servimg .imgtext,
+.services .servimg .mob {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
 .services .servimg .mob img {
   position: relative;
   bottom: -150px;
-  /* right: 23%; */
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  .services .servimg .mob img {
+    display: none;
+  }
 }
 .services .servimg .imgtext {
   width: 50%;
@@ -406,6 +427,11 @@ body {
   background-color: rgb(15 116 143 / 70%);
   top: 117px;
   right: -1%;
+}
+@media (max-width: 768px) {
+  .services .servimg .imgtext {
+    width: 100%;
+  }
 }
 .services .servimg .imgtext h2,
 .services .servimg .imgtext ul li {
@@ -428,4 +454,5 @@ body {
   position: relative;
   top: 1px;
 }
+
 /* End Services */
