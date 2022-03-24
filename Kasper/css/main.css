@@ -45,26 +45,44 @@ body {
   }
 }
 
-/* @media (max-width: 280px) {
-  .sech {
-    font-size: 65px;
-  }
-  .secp {
-    font-size: 15px;
-    margin-top: -15px;
-    letter-spacing: -1px;
-  }
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 35px;
 }
-@media (min-width: 281px) and (max-width: 767px) {
-  .sech {
-    font-size: 85px;
-  }
-  .secp {
-    font-size: 20px;
-    margin-top: -20px;
-    letter-spacing: -1px;
-  }
-} */
+.intro h2 {
+  font-size: 40px;
+  padding: 60px 0 10px;
+  margin: auto;
+  font-weight: 400;
+}
+.hr {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hr hr {
+  width: 120px;
+  border-bottom: 1px solid;
+}
+hr:nth-of-type(2) {
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  top: -9.5px;
+}
+.intro p {
+  padding: 60px 0;
+  max-width: 60%;
+  line-height: 2;
+  color: #777;
+}
 /* End Global Rules */
 
 /* Start Nav */
@@ -299,43 +317,7 @@ body {
 
 /* End Landing */
 /* Start Services */
-.services .intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.services .intro h2 {
-  font-size: 40px;
-  padding: 60px 0 10px;
-  margin: auto;
-  font-weight: 400;
-}
-.services .serv .hr {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.services .serv .hr hr {
-  width: 120px;
-  border-bottom: 1px solid;
-}
-.services .serv hr:nth-of-type(2) {
-  width: 15px;
-  height: 15px;
-  border: 2px solid black;
-  border-radius: 100%;
-  position: absolute;
-  background-color: white;
-  top: -7.5px;
-}
-.services .intro p {
-  padding: 60px 0;
-  max-width: 60%;
-  line-height: 2;
-  color: #777;
-}
+
 .services .container .servbox {
   display: flex;
   min-width: 100%;
@@ -456,3 +438,64 @@ body {
 }
 
 /* End Services */
+/* Start Portfolio */
+.portfolio .port ul {
+  display: flex;
+  position: relative;
+}
+.portfolio .port ul li {
+  list-style: none;
+  flex-direction: row;
+  padding: 10px;
+}
+.portfolio .port ul li:first-child {
+  background-color: var(--maincolor);
+  color: white;
+}
+.portfolio .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.portfolio .gallery .imgbox {
+  overflow: hidden;
+  position: relative;
+  flex-basis: 25%;
+}
+.portfolio .gallery .imgbox img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+@media (max-width: 1199px) {
+  .portfolio .gallery .imgbox {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .gallery .imgbox {
+    flex-basis: 100%;
+  }
+}
+.portfolio .gallery .imgbox .imgtxt {
+  height: 35%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  transition: 0.3s;
+  display: none;
+}
+.portfolio .gallery .imgbox .imgtxt h4 {
+  margin: 10px;
+}
+.portfolio .gallery .imgbox .imgtxt p {
+  color: var(--maincolor);
+}
+.portfolio .gallery .imgbox:hover img {
+  transform: rotate(5deg) scale(120%);
+}
+.portfolio .gallery .imgbox:hover .imgtxt {
+  display: block;
+}
+/* End Portfolio */
